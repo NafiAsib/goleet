@@ -1,3 +1,5 @@
+package leetcode
+
 func maxProfit(prices []int) int {
 	if len(prices) < 2 {
 		return 0
