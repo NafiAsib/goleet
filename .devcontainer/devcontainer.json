@@ -1,8 +1,21 @@
 {
   "name": "Go",
   "image": "mcr.microsoft.com/devcontainers/go:0-1.19-bullseye",
-  // "remoteUser": "root",
+  "remoteUser": "vscode",
   "mounts": [
     "type=bind,source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,readonly"
-  ]
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.Go"
+      ],
+      "settings": {
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.guides.bracketPairs": "active",
+        "gopls": { "ui.semanticTokens": true }
+      }
+    }
+  }
 }
