@@ -1,6 +1,6 @@
 {
   "name": "Go",
-  "image": "mcr.microsoft.com/devcontainers/go:0-1.19-bullseye",
+  "image": "mcr.microsoft.com/devcontainers/go:1.21-bullseye",
   "remoteUser": "vscode",
   "mounts": [
     "type=bind,source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,readonly"
@@ -17,5 +17,6 @@
         "gopls": { "ui.semanticTokens": true }
       }
     }
-  }
+  },
+  "postCreateCommand": "bash .devcontainer/post-install.sh"
 }
